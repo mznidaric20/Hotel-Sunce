@@ -1,0 +1,153 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: rgb(255, 200, 99);
+}
+
+.trecina {
+    width: 30%;
+    background-color: bisque;
+    float: left;
+    margin: 1.1%;
+    color: black;
+}
+
+footer {
+    width: 100%;
+    float: left;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+#logo,
+.logo {
+    float: left;
+}
+
+header.banner {
+    background-image: url(../dokumenti/slike/banner.jpg);
+    background-size: 100%;
+    height: 400px;
+    position: relative;
+}
+
+a~h1 {
+    font-size: 40px;
+    color: Gray;
+
+}
+
+nav {
+    background-color: bisque;
+    color: Gray;
+
+}
+
+.trenutna,
+.bold {
+    font-weight: bolder;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+}
+
+nav a:hover {
+
+    background-color: rgb(241, 157, 61);
+}
+
+.italic {
+    font-style: italic;
+}
+
+.prvired:nth-child(odd),
+.trecired:nth-child(odd) {
+    background-color: rgb(43, 134, 238);
+}
+
+.drugired:nth-child(odd),
+.cetvrtired:nth-child(odd) {
+    background-color: rgb(43, 134, 238);
+}
+
+.prvired:nth-child(even),
+.trecired:nth-child(even) {
+    background-color: rgb(146, 185, 230);
+}
+
+.drugired:nth-child(even),
+.cetvrtired:nth-child(even) {
+    background-color: rgb(146, 185, 230);
+}
+
+.prvired:hover,
+.drugired:hover,
+.trecired:hover,
+.cetvrtired:hover {
+    background-color: gray;
+}
+
+#cjenikthead {
+    background-color: blueviolet;
+}
+
+.slikaindex {
+    height: 400px;
+    width: 100%;
+}
+
+a[href^="https"] {
+    color: blue;
+}
+
+h2+p {
+    color: gray;
+}
+
+div>p {
+    font-weight: bold;
+}
+
+a:link {
+    color: rgb(7, 81, 105);
+}
+
+a:visited {
+    color: blueviolet;
+}
+
+.cssgrid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    padding: 20px;
+    grid-gap: 15px;
+    margin: inherit;
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.cssgrid img {
+    transition: transform 0.3s;
+}
+
+.cssgrid img:hover {
+    transform: scale(1.1);
+}
+
+#cjenik table,
+#cjenik th,
+#cjenik td {
+    border: 1px solid black;
+}
+
+#mznidaric20 {
+    padding: 30px;
+    margin: 30px
+}

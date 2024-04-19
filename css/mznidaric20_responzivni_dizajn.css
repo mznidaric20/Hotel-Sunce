@@ -1,0 +1,153 @@
+@media (max-width: 479px) {
+    * {
+        overflow-x: hidden;
+    }
+
+    nav a {
+        display: inline-block;
+        text-decoration: none;
+        color: black;
+        visibility: hidden;
+    }
+
+    nav::before {
+        content: "Izbornik";
+        display: inline-block;
+        color: black;
+        text-align: center;
+    }
+
+    nav:hover a {
+        visibility: visible;
+    }
+
+    nav:hover::before {
+        display: none;
+    }
+
+    .cssgrid-tablica {
+        display: grid;
+        grid-template-columns: auto;
+        margin: inherit;
+        padding: 0%;
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
+
+    .cssgrid-tablica-hidden {
+        visibility: hidden;
+    }
+
+    .cssgrid {
+        display: grid;
+        grid-template-columns: auto;
+        margin: inherit;
+        padding: 0%;
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
+
+    .cssgrid-obrazac {
+        display: grid;
+        grid-template-columns: auto;
+        padding: 20px;
+        grid-gap: 15px;
+        margin: inherit;
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
+
+    .cssgrid-obrazac-opis {
+        display: grid;
+        grid-template-columns: auto;
+
+    }
+
+    form table,
+    form {
+        width: 90%;
+    }
+
+    input {
+        width: 100%;
+    }
+
+    figure {
+        width: 100%;
+        padding: 0%;
+        margin: 0%;
+    }
+
+    #intslk {
+        width: 100%;
+    }
+
+    #vid {
+        width: 100%;
+    }
+
+    #kar {
+        width: 100%;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    .tablica-info {
+        display: block;
+    }
+}
+
+@media (min-width: 480px) and (max-width: 1024px) {
+    * {
+        overflow-x: hidden;
+
+    }
+
+    #intslk {
+        width: 100%;
+    }
+
+    .cssgrid {
+        display: grid;
+        grid-template-columns: auto auto;
+        padding: 20px;
+        grid-gap: 15px;
+        margin: inherit;
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
+
+    .cssgrid-obrazac {
+        display: grid;
+        grid-template-columns: auto;
+        padding: 20px;
+        grid-gap: 15px;
+        margin: inherit;
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
+
+    body {
+        background-color: rgb(87, 49, 124);
+        color: aqua;
+    }
+}
+
+@media (min-width: 1025px) {
+    * {
+
+        overflow-x: hidden;
+    }
+
+    .cssgrid-obrazac {
+        display: grid;
+        grid-template-columns: auto auto;
+        padding: 20px;
+        grid-gap: 15px;
+        margin: inherit;
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
+}

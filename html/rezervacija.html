@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Rezervacija</title>
+    <meta charset="utf-8">
+    <meta name="Author" content="Matija Žnidarić">
+    <meta name="Description" content="Stranica rezervacije sa dva obrasca i cijenikom usluga">
+    <meta name="Key Words" content="Cjenik, Usluge, Obrazac, Tablica, Forma,">
+    <link rel="stylesheet" href="../css/mznidaric20.css">
+    <link rel="stylesheet" href="../css/mznidaric20_responzivni_dizajn.css">
+    <script src="../jsk/mznidaric20.js"></script>
+</head>
+
+<body>
+    <header>
+        <a href="../html/index.html">
+            <img class="logo" src="../dokumenti/slike/logo.png" height="100" alt="Logo">
+        </a>
+        <h1>Rezervacija</h1>
+    </header>
+    <nav>
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="../html/index.html">Index</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="../dokumentacija/autor.html">Autor</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="../dokumentacija/dokumentacija.html">Dokumentacija</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="../html/multimedija.html">Multimedija</a>&nbsp;&nbsp;&nbsp;&nbsp;
+        <a class="trenutna" href="../html/rezervacija.html">Rezervacija</a>&nbsp;&nbsp;&nbsp;&nbsp;
+
+    </nav>
+    <main>
+        <section id="cjenik">
+            <h2>Cjenik</h2>
+            <table>
+                <caption>Cijenik usluga</caption>
+                <thead id="cjenikthead">
+                    <tr>
+                        <th class="cssgrid-tablica" colspan="2" scope="col">Naziv i opis usluge</th>
+                        <th class="cssgrid-tablica" scope="col">Cijena</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="prvired">
+                        <td class="cssgrid-tablica" rowspan="2">Doručak</td>
+                        <td class="cssgrid-tablica">Kontinentalni doručak</td>
+                        <td class="cssgrid-tablica">7€</td>
+                    </tr>
+                    <tr class="prvired">
+                        <td class="cssgrid-tablica">Buffet doručak</td>
+                        <td class="cssgrid-tablica">10€</td>
+                    </tr>
+                    <tr class="drugired">
+                        <td class="cssgrid-tablica" rowspan="2">Ručak</td>
+                        <td class="cssgrid-tablica">Dnevni meni</td>
+                        <td class="cssgrid-tablica">14€</td>
+                    </tr>
+                    <tr class="drugired">
+                        <td class="cssgrid-tablica">A la carte meni</td>
+                        <td class="cssgrid-tablica">20€</td>
+                    </tr>
+                    <tr class="trecired">
+                        <td class="cssgrid-tablica" rowspan="2">Večera</td>
+                        <td class="cssgrid-tablica">Dnevni meni</td>
+                        <td class="cssgrid-tablica">16€</td>
+                    </tr>
+                    <tr class="trecired">
+                        <td class="cssgrid-tablica">A la carte meni</td>
+                        <td class="cssgrid-tablica">24€</td>
+                    </tr>
+                    <tr class="cetvrtired">
+                        <td class="cssgrid-tablica">Parking</td>
+                        <td class="cssgrid-tablica">Parking mjesto</td>
+                        <td class="cssgrid-tablica">8€ po danu</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div id="ispis">DAD</div>
+        </section><br>
+        <section>
+            <h2>Obrazac za rezervaciju sobe</h2>
+            <form id="obrazac1" class="cssgrid-obrazac" name="forma"
+                action="/api/rezervacije" method="post">
+                <fieldset>
+                    <legend>Klijent</legend>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th class="cssgrid-obrazac-opis" scope="row"><label for="ime">Ime:</label></th>
+                                <td class="cssgrid-obrazac-opis"><input id="ime" name="ime" placeholder="Unesite ime"
+                                        type="text" required></td>
+                            </tr>
+                            <tr>
+                                <th class="cssgrid-obrazac-opis" scope="row"><label for="prezime">Prezime:</label></th>
+                                <td class="cssgrid-obrazac-opis"><input id="prezime" name="prezime"
+                                        placeholder="Unesite prezime" type="text" required></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </fieldset>
+                <fieldset>
+                    <legend>Usluge hotela</legend>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <th class="cssgrid-obrazac-opis" scope="row"><label for="osobe">Broj osoba:</label></th>
+                                <td class="cssgrid-obrazac-opis"><input id="osobe" name="osobe"
+                                        placeholder="Unesite broj osoba" type="number" required></td>
+                            </tr>
+                            <tr>
+                                <th class="cssgrid-obrazac-opis" scope="row"><label for="nocenja">Broj noćenja:</label>
+                                </th>
+                                <td class="cssgrid-obrazac-opis"><input id="nocenja" name="nocenja"
+                                        placeholder="Unesite broj noćenja" type="number" required>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="cssgrid-obrazac-opis" scope="row"><label for="soba">Broj soba:</label></th>
+                                <td class="cssgrid-obrazac-opis"><input id="soba" name="soba"
+                                        placeholder="Unesite broj soba" type="number" required></td>
+                            </tr>
+                            <tr>
+                                <th class="cssgrid-obrazac-opis" scope="row"><label for="vrsta_sobe">Vrsta sobe:</label>
+                                </th>
+                                <td class="cssgrid-obrazac-opis">
+                                    <select id="vrsta_sobe" name="vrsta_sobe" >
+                                        <option value="option1">jednokrevetna soba</option>
+                                        <option value="option2">Dvokrevetna soba</option>
+                                        <option value="option3">Penthouse</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th class="cssgrid-obrazac-opis" scope="row"><label for="dolazak">Datum dolaska:</label>
+                                </th>
+                                <td class="cssgrid-obrazac-opis"><input id="dolazak" name="dolazak" type="date"
+                                        required></td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <button type="reset">Osvježi</button>
+                                    <button type="submit" id="provjeraslanje" >Pošalji</button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </fieldset>
+            </form>
+        </section><br>
+        <section id="obrazac_kontakt">
+            <h2>Obrazac za kontakt</h2>
+            <form id="obrazac2" name="forma" action="https://spider.foi.hr/OWT/materijali/ispis_forme.php"
+                method="post">
+                <table>
+                    <tbody>
+                        <tr>
+                            <th scope="row" class="cssgrid-obrazac-opis">Predmet:</th>
+                            <td class="cssgrid-obrazac-opis"><input name="predmet" id="predmet" type="text" maxlength="30" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="cssgrid-obrazac-opis" scope="row">Vrsta upita:</th>
+                            <td class="cssgrid-obrazac-opis">
+                                <input type="radio" id="opcija1" name="vrsta_upita" value="1" checked>
+                                <label for="opcija1">Pitanje</label>
+                                <input type="radio" id="opcija2" name="vrsta_upita" value="2">
+                                <label for="opcija2">Pohvala</label>
+                                <input type="radio" id="opcija3" name="vrsta_upita" value="3">
+                                <label for="opcija3">Kritika</label>
+                                <input type="radio" id="opcija4" name="vrsta_upita" value="4">
+                                <label for="opcija4">Ostalo</label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th class="cssgrid-obrazac-opis" scope="row">Poruka:</th>
+                            <td class="cssgrid-obrazac-opis"><textarea name="poruka" id="textarea" rows="10" cols="40"
+                                    maxlength="1000" required></textarea></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
+                                <button type="reset">Osvježi</button>
+                                <button type="submit" id="provjeraslanja2">Pošalji</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </section><br>
+    </main>
+    <footer>
+
+        <p>
+            <a href="https://creativecommons.org/licenses/by/2.0/hr/"><img src="../dokumenti/slike/CC.png"
+                    alt="CreativeCommons" height="20"></a>&copy; 2023. Matija Žnidarić
+
+            <a
+                href="https://validator.w3.org/check?uri=https://spider.foi.hr/OWT/2023/zadaca_02/mznidaric20/ostalo/rezervacija.html">
+                <img src="../dokumenti/slike/HTML5.png" alt="https://spider.foi.hr/OWT/materijali/slike/HTML5.png"
+                    height="30"></a>
+        </p>
+    </footer>
+</body>
+
+</html>
